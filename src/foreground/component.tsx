@@ -1,10 +1,12 @@
 import React from "react";
 import axios from "axios";
 import { MiniCard } from "./MiniCard";
+import Draggable from 'react-draggable'; // The default
+
 export const Foreground: React.FC = () => {
   const [World, setWorld] = React.useState<any>("");
-  const [Long, setLong] = React.useState<String>("");
-  const [worldTrad, setworldTrad] = React.useState<String>("");
+  const [Long, setLong] = React.useState<string>("");
+  const [worldTrad, setworldTrad] = React.useState<string>("");
   const [Open, setOpen] = React.useState<boolean>(false);
   document.addEventListener("mouseup", () => {
     const selObj = window.getSelection();
@@ -25,13 +27,14 @@ export const Foreground: React.FC = () => {
         )
         .then((response: any) =>
           setworldTrad(response?.data?.responseData?.translatedText),
-        )
-      
+        );
     }
     console.log(worldTrad);
   }, [World]);
 
   return (
+    <Draggable>
+
     <div
       style={{ position: "fixed", zIndex: 9999, bottom: "50px", right: "50px" }}
     >
@@ -46,11 +49,15 @@ export const Foreground: React.FC = () => {
           float: "right",
           textAlign: "center",
           background: "#4267b3",
+          userSelect:"none"
         }}
         onClick={() => setOpen(!Open)}
       >
-        T
+       
       </div>
     </div>
+    </Draggable>
+
+
   );
 };

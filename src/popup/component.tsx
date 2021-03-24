@@ -12,16 +12,14 @@ export const Popup: React.FC = () => {
     chrome.tabs.query({ currentWindow: true, active: true }, gotTab);
   }, [tolong, fromlong]);
 
-
-
-
-
-
   return (
     <div>
-      <InputCountry long={setfromlang} />
+     <h3> select language</h3>
+      <label >From</label>
+ <InputCountry long={setfromlang} />
+ <label>To</label>
+
       <InputCountry long={settolang} />
-      {tolong + fromlong}
     </div>
   );
 };

@@ -5,7 +5,9 @@ export interface HomeProps {
   worldTrad: any;
 }
 
-export const MiniCard: React.FC<HomeProps> = ({ World ,worldTrad}: HomeProps) => {
+export const MiniCard: React.FC<HomeProps> = ({
+  worldTrad,
+}: HomeProps) => {
   return (
     <div
       style={{
@@ -19,12 +21,23 @@ export const MiniCard: React.FC<HomeProps> = ({ World ,worldTrad}: HomeProps) =>
         fontSize: "20px",
         borderRadius: "10%",
         border: "2px solid #4267b3",
+        userSelect:"none",
+
       }}
     >
-      <h1 style={{display:"block",fontSize:"2em",margin:" 0px 0.67em",fontWeight:"bold"}}>tradwe</h1>
+      <h1
+        style={{
+          display: "block",
+          fontSize: "2em",
+          margin: " 0px 0.67em",
+          fontWeight: "bold",
+        }}
+      >
+        tradwe
+      </h1>
       <hr></hr>
 
-      <p>{World}</p>
+      <p>{worldTrad}</p>
     </div>
   );
 };

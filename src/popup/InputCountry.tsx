@@ -1,12 +1,10 @@
 import * as React from "react";
 const InputCountry = ({ long }: any) => {
-  console.log(long);
 
   return (
     <select
       data-placeholder="Choose a Language..."
       onChange={(event) => long(event?.target?.value)}
-      className="select select-style"
     >
       <option value="AF">Afrikaans</option>
       <option value="SQ">Albanian</option>

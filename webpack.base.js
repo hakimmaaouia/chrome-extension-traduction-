@@ -26,7 +26,7 @@ module.exports = {
     rules: [
       {
         exclude: /node_modules/,
-        test: /\.tsx?$/,
+        test: /\.tsx?$|png|jp(e*)g|svg|gif/,
         use: "ts-loader",
       },
     ],
