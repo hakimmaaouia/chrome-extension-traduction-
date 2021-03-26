@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-traduction",
+  "name": "Tradwe",
   "version": "1.0.0",
-  "description": "chrome-extension-traduction with React and TypeScript",
+  "description": "extension de traduction",
   "license": "MIT",
   "scripts": {
     "dev": "webpack --config webpack.development.js --watch --progress",

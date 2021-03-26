@@ -1,6 +1,5 @@
 import * as React from "react";
 const InputCountry = ({ long }: any) => {
-
   return (
     <select
       data-placeholder="Choose a Language..."

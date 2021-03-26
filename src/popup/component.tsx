@@ -14,10 +14,10 @@ export const Popup: React.FC = () => {
 
   return (
     <div>
-     <h3> select language</h3>
-      <label >From</label>
- <InputCountry long={setfromlang} />
- <label>To</label>
+      <h3> select language</h3>
+      <label>From</label>
+      <InputCountry long={setfromlang} />
+      <label>To</label>
 
       <InputCountry long={settolang} />
     </div>

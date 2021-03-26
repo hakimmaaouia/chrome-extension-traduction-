@@ -5,9 +5,7 @@ export interface HomeProps {
   worldTrad: any;
 }
 
-export const MiniCard: React.FC<HomeProps> = ({
-  worldTrad,
-}: HomeProps) => {
+export const MiniCard: React.FC<HomeProps> = ({ worldTrad }: HomeProps) => {
   return (
     <div
       style={{
@@ -21,8 +19,7 @@ export const MiniCard: React.FC<HomeProps> = ({
         fontSize: "20px",
         borderRadius: "10%",
         border: "2px solid #4267b3",
-        userSelect:"none",
-
+        userSelect: "none",
       }}
     >
       <h1

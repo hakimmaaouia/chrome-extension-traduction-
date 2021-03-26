@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { MiniCard } from "./MiniCard";
-import Draggable from 'react-draggable'; // The default
+import Draggable from "react-draggable"; // The default
 
 export const Foreground: React.FC = () => {
   const [World, setWorld] = React.useState<any>("");
@@ -34,30 +34,30 @@ export const Foreground: React.FC = () => {
 
   return (
     <Draggable>
-
-    <div
-      style={{ position: "fixed", zIndex: 9999, bottom: "50px", right: "50px" }}
-    >
-      {Open ? <MiniCard World={World} worldTrad={worldTrad} /> : null}
-
       <div
         style={{
-          borderRadius: "15px",
-          height: "30px",
-          width: "30px",
-          fontSize: "1.5em",
-          float: "right",
-          textAlign: "center",
-          background: "#4267b3",
-          userSelect:"none"
+          position: "fixed",
+          zIndex: 9999,
+          bottom: "50px",
+          right: "50px",
         }}
-        onClick={() => setOpen(!Open)}
       >
-       
+        {Open ? <MiniCard World={World} worldTrad={worldTrad} /> : null}
+
+        <div
+          style={{
+            borderRadius: "15px",
+            height: "30px",
+            width: "30px",
+            fontSize: "1.5em",
+            float: "right",
+            textAlign: "center",
+            background: "#4267b3",
+            userSelect: "none",
+          }}
+          onClick={() => setOpen(!Open)}
+        ></div>
       </div>
-    </div>
     </Draggable>
-
-
   );
 };
